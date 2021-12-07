@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HYG - HỘP QUÀ TẾT XUÂN NHÂM DẦN 2022</title>
+  <base href="/">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//unpkg.com/slick-carousel@1.8.1/slick/slick.js"></script>
+  <link href="//db.onlinewebfonts.com/c/9bcccb898d45edea25c06a330c6483c5?family=BrownstoneW01-SansThin" rel="stylesheet"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-144762479-6" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-144762479-6');
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="margin: 0;">
+  <div class="app-container">
+    <app-root></app-root>
+  </div>
+  <script>
+    function postToGoogle() {
+      var field1 = $("#hoten").val();
+      var field2 = $("#congty").val();
+      var field3 = $("#email").val();
+      var field4 = $("#dienthoai").val();
+      var field5 = $("#diachinhanbanh").val();
+      var field6 = $("#soluonghop").val();
+      var field7 = $("#ngaycanbanh").val();
+      var field8 = $("#ghichukhac").val();
+
+      if (field1 == "") {
+        alert('Vui lòng điền tên');
+        document.getElementById("fname").focus();
+        return false;
+      }
+      if (field3 == "") {
+        alert('Vui lòng điền email');
+        document.getElementById("email").focus();
+        return false;
+      }
+      if (field4 == "" || field4.length > 10 || field4.length < 10) {
+        alert('Vui lòng điền đúng số điện thoại');
+        document.getElementById("dienthoai").focus();
+        return false;
+      }
+      if (field5 == "") {
+        alert('Vui lòng điền địa chỉ');
+        document.getElementById("diachinhanbanh").focus();
+        return false;
+      }
+      $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSfVkqKfV5JX-ta_gb6CEOynqSX91BHMHXEn7hf_P2p6uxPKPg/formResponse?",
+        data: {
+          "entry.1295710286": field1,
+          "entry.1736182736": field2,
+          "entry.461577370": field3,
+          "entry.611852022": field4,
+          "entry.186280932": field5,
+          "entry.98236514": field6,
+          "entry.139207724": field7,
+          "entry.939650396": field8,
+        },
+        type: "POST",
+        dataType: "xml",
+        success: function (d) {
+        },
+        error: function (x, y, z) {
+          /* Countdown seconds */
+          var count = 4;
+          /* Website to redirect */
+          var url = "http://www.hoangyengroup.com";
+          /* Call function at specific intervals */
+          var countdown = setInterval(function () {
+            /* Display Countdown with txt */
+            $('#displayTimer').text("Redirection in: " + count-- + " seconds");
+            /* If count is smaller than 0 ...*/
+            if (count < 0) {
+              $('#displayTimer').text("Redirecting now....");
+              /* Clear timer set with setInterval */
+              clearInterval(countdown);
+              /* Redirect */
+              $(location).attr("href", url);
+            }
+            // milliseconds
+          }, 1000);
+          $('.hover_bkgr_fricc').show();
+        }
+      });
+      return false;
+    }
+              /* Countdown seconds */
+  </script>
+</body>
+
+</html>

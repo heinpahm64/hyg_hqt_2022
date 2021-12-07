@@ -1,0 +1,646 @@
+<section id="sec1" (wheel)="test2(1)" #sec1>
+  <div class="container-main">
+    <div class="container">
+      <span [class.onscroll]="isScroll" class="navbar">
+        <div class="section">
+          <ul *ngFor="let content of contents">
+            <li>
+              <div *ngIf="content.status" (click)="scrollToElement(content.section)" id="active"
+                (click)="test(content.id)" class="content-container">{{content.name}}</div>
+              <div *ngIf="!content.status" (click)="scrollToElement(content.section)" (click)="test(content.id)"
+                class="content-container">{{content.name}}</div>
+              <div *ngIf="content.status" (click)="scrollToElement(content.section)" class="content-container-test">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </span>
+      <div class="section-logo-container">
+        <div class="section-logo">
+        </div>
+      </div>
+    </div>
+    <div class="container-main-MAIN">
+      <div style="height: fit-content; z-index: 0;" class="slider">
+        <!-- <img class='slideimg' style='z-index: 0;' src="../../assets/hopquatet2022/slider1.jpg" alt="" width="100%"> -->
+        <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig"
+          (afterChange)="afterChange($event)">
+          <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img class='slideimg' style='z-index: 0;' src="{{ slide.img }}" alt="" width="100%">
+          </div>
+        </ngx-slick>
+      </div>
+    </div>
+    <!-- <div class="slider-info">
+    <div class="slider-container">
+      <div class="flower-left"></div>
+      <div _ngcontent-idy-c1="" class="info-center">
+        <div _ngcontent-idy-c1="" class="top">
+          
+          <span _ngcontent-idy-c1="" class="ng-star-inserted">
+            <div _ngcontent-idy-c1="" class="lightimg"></div>
+          </span>
+          <span _ngcontent-idy-c1="" class="ng-star-inserted">
+            <div _ngcontent-idy-c1="" class="lightimg active"></div>
+          </span><span _ngcontent-idy-c1="" class="ng-star-inserted">
+            <div _ngcontent-idy-c1="" class="lightimg"></div>
+          </span>
+          <span _ngcontent-idy-c1="" class="ng-star-inserted">
+            <div _ngcontent-idy-c1="" class="lightimg"></div>
+          </span>
+        </div>
+        <div _ngcontent-idy-c1="" class="bottom"><img _ngcontent-idy-c1="" height="auto"
+            src="../../assets/traoquatangguitinhthan.png">
+        </div>
+      </div>
+      <div class="flower-right"></div>
+    </div>
+  </div> -->
+    <!-- <div class='slider-info'>
+    
+    </div> -->
+    <div class='something'>
+      Tết năm nay thật đặc biệt, ai cũng mong 1 cái Tết Bình An, nhiều sức khỏe, niềm vui bên người thân và dành tặng
+      nhau những món quà đong đầy tình cảm.
+    </div>
+    <div class="slider-info-2">
+      <div class='something-2'>
+        Dịp Tết Nhâm Dần 2022, Hoang Yen Group tự hào với sự ra mắt của Bộ sưu tập Hộp Quà Tết “Nhâm Dần Đón Lộc Bình
+        An” với đa dạng thiết kế, sang trọng và tinh tế, trọn vẹn tinh hoa văn hóa Việt Nam kết hợp các sản phẩm
+        nhập khẩu đem lại sự mới mẻ.
+      </div>
+      <div id="slidermobile" class="container-main-MAIN-2">
+        <div style="height: fit-content; z-index: 0;" class="slider-2">
+          <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig2"
+            (afterChange)="afterChange($event)">
+            <div ngxSlickItem *ngFor="let slide2 of slides2" class="slide2">
+              <img class='slideimg' style='z-index: 0;' src="{{ slide2.img }}" alt="" width="100%">
+            </div>
+          </ngx-slick>
+        </div>
+      </div>
+      <!-- <div id="slidermobile" class="container-main-MAIN-2">
+        <div class="slider-2">
+          <img src="../../assets/hopquatet2022/slider2.jpg" alt="">
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+<section id="sec2" (wheel)="test2(2)" #sec2>
+  <div class="container-main">
+    <!-- <div class="bohop">
+      <img width=100% src='../../assets/bohop.png'>
+    </div> -->
+    <div class="chitietbanh">
+      <div *ngIf="responsive" class="hopbanhvagiatien">
+        <div class="hopbanhTY1">
+          <img src='../../assets/hopquatet2022/hopbanhTY1@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanh">
+        <div id='boxshadow' class="giatien topmargin">
+          <img src='../../assets/hopquatet2022/TY1@2x.png'>
+        </div>
+
+        <div class="gioithieubanh">
+          <span class="gioithieubanh-text">
+            Sắc đỏ rục rỡ sang trọng, kết hợp hài hòa với họa tiết mùa xuân mang lại hương vị Tết đong đầy cảm xúc, như
+            lời chúc may mắn, tài lộc và bình an đến mọi nhà.
+          </span>
+        </div>
+        <div class="vibanh">
+          <table>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Set socola Ritter
+                Sport
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Đài Loan
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị
+                gừng mật ong
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile </td>
+            </tr>
+
+          </table>
+        </div>
+        <div class="giatienbanhvamuangay">
+          <div class="giatienbanh">
+            <img src="../../assets/hopquatet2022/giaTY1.png" alt="">
+          </div>
+          <div class="muangay">
+            <a href="https://deli.hoangyengroup.com/collections/hoang-yen-express" target="_blank">
+              <img src="../../assets/hopquatet2022/muangay.png">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!responsive" class="hopbanhvagiatien">
+        <div class="hopbanhTY1">
+          <img src='../../assets/hopquatet2022/hopbanhTY1@2x.png'>
+        </div>
+      </div>
+    </div>
+    <div class="chitietbanh chitietbanhmobile">
+      <div class="hopbanhvagiatienTY2" style='flex:3'>
+        <div class="hopbanhTY2 hopbanhmobile">
+          <img src='../../assets/hopquatet2022/hopbanhTY2@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanhTY2" id='special'>
+        <div id='boxshadowTY2' class="giatien2 topmargin2 boxmobile">
+          <img width=50% height="150%" src='../../assets/hopquatet2022/TY2@2x.png'>
+        </div>
+        <div class="gioithieubanh-2">
+          <span class="gioithieubanh-text">
+            Tương đồng với thiết kế của Tiểu Yến 1, Tiểu Yến 2 với thêm lựa chọn loại rượu... thêm loại rượu nồng ấm
+            mang
+            lại món quà Tết đủ đầy, trọn vẹn dành tặng người thân, đồng nghiệp và đối tác.
+          </span>
+        </div>
+        <div class="vibanh vibanh2">
+          <table>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị
+                gừng mật ong</td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile</td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Đài Loan
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu Pháp Just
+                Merlot
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="giatienbanhvamuangayTY2">
+          <div class="giatienbanh-2">
+            <img src="../../assets/hopquatet2022/giaTY2.png" alt="">
+          </div>
+          <div class="muangay">
+            <a href="https://deli.hoangyengroup.com/collections/hoang-yen-express" target="_blank">
+              <img src="../../assets/hopquatet2022/muangay.png">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="chitietbanhLY">
+      <div *ngIf="responsive" class="hopbanhvagiatienLY">
+        <div class="hopbanhlocyen">
+          <img src='../../assets/hopquatet2022/hopbanhLY@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanhLY">
+        <div id='boxshadowLY' class="giatien topmargin">
+          <img src='../../assets/hopquatet2022/tenLY@2x.png'>
+        </div>
+        <div class="gioithieubanh">
+          <span class="gioithieubanh-text">
+            Lộc Yến mang hơi hướng mới mẻ với thiết kế sắc màu độc đáo, độc đáo với điểm nhấn là hoa mộc lan tinh tế,
+            hiện đại. Hộp quà mang hơi hướng tươi trẻ chắc chắn là món quà gây ấn tượng ngay từ lần đầu cho người nhận.
+          </span>
+        </div>
+        <div class="vibanh">
+          <table>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị
+                gừng mật ong
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Set socola Ritter
+                Sport
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Đài Loan
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu Úc Jacob's
+                Creek<br>&nbsp;&nbsp;&nbsp; Moscato Rosé</td>
+            </tr>
+          </table>
+        </div>
+        <div class="giatienbanhvamuangay">
+          <div class="giatienbanh">
+            <img src="../../assets/hopquatet2022/giaLY.png" alt="">
+          </div>
+          <div class="muangay">
+            <a href="https://deli.hoangyengroup.com/collections/hoang-yen-express" target="_blank">
+              <img src="../../assets/hopquatet2022/muangay.png">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!responsive" class="hopbanhvagiatienLY">
+        <div class="hopbanhlocyen">
+          <img src='../../assets/hopquatet2022/hopbanhLY@2x.png'>
+        </div>
+      </div>
+    </div>
+    <div class="chitietbanhhaiyen chitietbanhmobile">
+      <div class="hopbanhvagiatienhaiyen" style='flex:3'>
+        <div class="hopbanhHY hopbanhmobile">
+          <img src='../../assets/hopquatet2022/hopbanhHY1@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanh" id='special'>
+        <div id='boxshadowHY1' class="giatien2 topmargin2 boxmobile">
+          <img width=50% height="150%" src='../../assets/hopquatet2022/tenHY1@2x.png'>
+        </div>
+        <div class="gioithieubanhHY1">
+          <span class="gioithieubanh-text">
+            Hải Yến nổi bật với sắc xanh dương trang trọng, họa tiết vàng nổi bật tạo nên điểm nhấn cho hộp cùng với chi
+            tiết hoa mẫu hơn và hình ảnh chim Hoàng yến sang trọng, quý phái. Bộ quà tặng đầy đủ các sản phẩm cần thiết
+            cho 1 khay mứt bánh mời khách ngày Tết , 1 món quà hoàn hảo mừng năm mới.
+          </span>
+        </div>
+        <div class="giatienbanhvamuangayHY1">
+          <div class="giatienbanhHY2">
+            <img src="../../assets/hopquatet2022/giaHY1.png" alt="">
+          </div>
+          <div class="muangayHY">
+            <a href="https://deli.hoangyengroup.com/collections/hoang-yen-express" target="_blank">
+              <img src="../../assets/hopquatet2022/muangay.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vibanhhaiyen chitietbanhmobile1">
+      <table>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mơ sấy dẻo Thổ Nhĩ Kỳ
+          </td>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nescafe Gold vị
+            Cappuccino </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị gừng
+            mật ong </td>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Set socola Ritter Sport
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile</td>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu Chile Terre Forti
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Đài Loan
+          </td>
+          <td><span><img height=16px src=''></span>&nbsp;&nbsp;&nbsp; Sangiovese Rubicone IGT
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="chitietbanhhaiyen2 chitietbanhmobile1">
+      <div *ngIf="responsive" class="hopbanhvagiatienhaiyen2">
+        <div class="hopbanh">
+          <img src='../../assets/hopquatet2022/hopbanhHY2@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanh">
+        <div id='boxshadow' class="giatien topmargin">
+          <img src='../../assets/hopquatet2022/tenHY2@2x.png'>
+        </div>
+        <div class="gioithieubanh">
+          <span class="gioithieubanh-text">
+            Cùng mẫu thiết kế với Hải Yến 1 – Hải Yến 2 luôn mang cho mình nét riêng với bộ sản phẩm gồm mật ong cao cấp
+            và trà hoa thượng hạng thay thế cho cà phê và bánh quy sầu riêng
+            Đài Loan. Đây có lẽ là món quà trang nhã cũng như lời chúc sức khỏe đến khách hàng và đối tác.
+          </span>
+        </div>
+        <div class="giatienbanhvamuangay">
+          <div class="giatienbanhHY2">
+            <img src="../../assets/hopquatet2022/giaHY2.png" alt="">
+          </div>
+          <div class="muangayHY">
+            <a href="https://deli.hoangyengroup.com/collections/hoang-yen-express" target="_blank">
+              <img src="../../assets/hopquatet2022/muangay.png">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!responsive" class="hopbanhvagiatienHY2">
+        <div class="hopbanhHY">
+          <img src='../../assets/hopquatet2022/hopbanhHY2@2x.png'>
+        </div>
+      </div>
+
+    </div>
+    <div class="vibanhhaiyen2 chitietbanhmobile1">
+      <table>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mơ sấy dẻo Thổ Nhĩ Kỳ
+          </td>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mật ong Le Fruit
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị gừng
+            mật ong </td>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Set socola Ritter
+            Sport
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile
+          </td>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu Chile Terre Forti
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Trà thượng hạng
+          </td>
+          <td><span><img height=16px src=''></span>&nbsp;&nbsp;&nbsp; Sangiovese Rubicone IGT
+          </td>
+        </tr>
+
+      </table>
+    </div>
+    <div class="chitietbanhDY">
+      <div *ngIf="responsive" class="hopbanhvagiatienDY">
+        <div class="hopbanhlocyen">
+          <img src='../../assets/hopquatet2022/hopbanhDY_1@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanh">
+        <div id='boxshadowDY' class="giatien topmargin">
+          <img src='../../assets/hopquatet2022/tenDY@2x.png'>
+        </div>
+        <div class="gioithieubanh">
+          <span class="gioithieubanh-text">
+            Dạ Yến mang hơi hướng mới mẻ với thiết kế sắc màu độc đáo, độc đáo với điểm nhấn là hoa mộc lan tinh tế,
+            hiện đại. Hộp quà mang hơi hướng tươi trẻ chắc chắn là món quà gây ấn tượng ngay từ lần đầu cho người nhận.
+          </span>
+        </div>
+        <div class="vibanh">
+          <table>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mơ sấy dẻo Thổ Nhĩ
+                Kỳ
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị
+                gừng mật ong
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Trà thượng hạng
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mật ong Le Fruit
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Set socola Ritter
+                Sport
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Đài Loan
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nescafe Gold vị
+                Cappuccino
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu Chile Terre
+                Forti<br>&nbsp;&nbsp;&nbsp; Sangiovese Rubicone IGT
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="giatienbanhvamuangay">
+          <div class="giatienbanh">
+            <img src="../../assets/hopquatet2022/giaDY.png" alt="">
+          </div>
+          <div class="muangayHY">
+            <a href="https://deli.hoangyengroup.com/collections/hoang-yen-express" target="_blank">
+              <img src="../../assets/hopquatet2022/muangay.png">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!responsive" class="hopbanhvagiatienDY">
+        <div class="hopbanhDY">
+          <img src='../../assets/hopquatet2022/hopbanhDY_1@2x.png'>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="gioithieubanhDY">
+      <img src="../../assets/hopquatet2022/tenDY@2x.png" alt="">
+    </div>
+    <div class="gioithieubanhDY">
+      Dạ Yến nổi bật bởi màu vàng lộng lẫy, tương trưng cho sự phú quý, tài lộc cùng họa tiết hoa mộc lan khoe sắc và
+      chim hoàng yến tạo nên 1 tổng thể bức tranh của sự thịnh vượng. Đây chắc chắn là hộp quà tặng giá trị nhất với sự
+      kết hợp hài hòa, trọn vẹn cho năm mới hoàn hảo.
+    </div> -->
+    <!-- <div class="chitietbanhdayen">
+      <div *ngIf="responsive" class="hopbanhvagiatiendayen">
+        <div class="hopbanhvagiatiendayen">
+          <img src='../../assets/hopquatet2022/hopbanhDY_1@2x.png'>
+        </div>
+      </div>
+      <div class="tenvachitietbanhdayen">
+        <div class="vibanh">
+          <table>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mơ sấy dẻo Thổ Nhĩ
+                Kỳ</td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạt điều sấy vị
+                gừng mật ong</td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô Chile
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Trà thượng hạng
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Mật ong Le Fruit
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Set socola Ritter
+                Sport</td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Đài Loan
+              </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nescafe Gold vị
+                Cappuccino </td>
+            </tr>
+            <tr>
+              <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu Chile Terre
+                Forti<br>&nbsp;&nbsp;&nbsp; Sangiovese Rubicone IGT </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="giatienbanhHY2">
+                  <img src="../../assets/hopquatet2022/DY@Price@2x.png" alt="">
+                </div>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+      <div *ngIf="!responsive" class="hopbanhvagiatiendayen">
+        <div class="hopbanh">
+          <img height="350px" width="100px" src='../../assets/hopquatet2022/DY@2x.png'>
+        </div>
+      </div>
+    </div> -->
+    <!--     
+    <div class="chitietbanh chitietbanhmobile">
+      <div *ngIf="responsive" class="hopbanhvagiatien">
+        <div class="priceDY">
+          <img src='../../assets/hopquatet2022/tenDY@2x.png' padding-left=100px>
+        </div>
+        <div class="hopbanh hopbanhmobile">
+          <img width=100% src='../../assets/hopquatet2022/DY@2x.png'>
+        </div>
+      </div>
+      <div *ngIf="!responsive" class="hopbanhvagiatienDY">
+        <div class="priceDY">
+          <img src='../../assets/hopquatet2022/tenDY@2x.png' padding-left=100px, width="100%">
+        </div>
+        <div class="hopbanhDY">
+          <img src='../../assets/hopquatet2022/DY@2x.png' padding-left=100px, width="100%">
+        </div>
+      </div>
+    </div>
+    <div class="vibanh">
+      <table>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Hạnh nhân BBQ
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Nho khô cao cấp
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Socola Mini Ritter
+            Sport
+          </td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Bánh quy Sầu riêng
+            Đài Loan</td>
+        </tr>
+        <tr>
+          <td><span><img height=16px src='../../assets/hopquatet2022/iconchuthap@2x.png'></span> Rượu vang Úc
+            Jacob's Creek<br>&nbsp;&nbsp;&nbsp; Moscato Rosé</td>
+        </tr>
+
+      </table>
+    </div> -->
+
+  </div>
+</section>
+<section id="sec4" (wheel)="test2(4)" #sec4>
+  <div class="container-main">
+    <div class="bangchinhsachuudai">
+      <img width=100% src='../../assets/hopquatet2022/chinhsach-6.png'>
+    </div>
+  </div>
+</section>
+<section id="sec5" (wheel)="test2(4)" #sec5>
+  <div class="container-main-sec5">
+    <div class='inbox'>
+      <div class='inboxform'>
+        <div class='formimg'>
+        </div>
+        <div class='forminput'>
+          <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off">
+            <div style='text-align: center;'>
+              <p style='font-size: 18px;color: rgb(236, 35, 35);'>{{apiMsg}}</p>
+            </div>
+            <mat-form-field class="input">
+              <input [(ngModel)]="hoten" id="hoten" name="hoten" matInput placeholder="Họ Tên" required>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <input [(ngModel)]="congty" id="congty" matInput placeholder="Công ty (nếu có)">
+            </mat-form-field>
+            <mat-form-field class="input half paddingright">
+              <input [(ngModel)]="email" id="email" matInput placeholder="Email" required>
+            </mat-form-field>
+            <mat-form-field class="input half">
+              <input [(ngModel)]="dienthoai" id="dienthoai" matInput placeholder="Điện thoại" required>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <input [(ngModel)]="diachinhanbanh" id="diachinhanbanh" matInput placeholder="Địa chỉ nhận sản phẩm"
+                required>
+            </mat-form-field>
+            <mat-form-field class="input half paddingright">
+              <input [(ngModel)]="soluonghop" id="soluonghop" matInput placeholder="Số lượng hộp" required>
+            </mat-form-field>
+            <mat-form-field class="input half">
+              <input [(ngModel)]="ngaycanbanh" id="ngaycanbanh" matInput [matDatepicker]="picker"
+                placeholder="Ngày nhận hàng" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <input [(ngModel)]="ghichukhac" id="ghichukhac" matInput placeholder="Ghi chú khác">
+            </mat-form-field>
+            <div class="submitwrapper">
+              <button id="submit" name="submit" style='padding: 0;background-color: transparent;border:none'
+                class="submit">
+
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec6">
+  <div class='footer'>
+  </div>
+</section>
+<a onclick="window.location.href=this">
+  <div class="hover_bkgr_fricc">
+    <div class="imagepopup">
+      <img src="../../assets/popup.png" alt="popup-HYG" border="0" width="400px">
+    </div>
+  </div>
+</a>

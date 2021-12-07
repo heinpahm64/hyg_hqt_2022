@@ -1,0 +1,923 @@
+/* You can add global styles to this file, and also import other style files */
+.app-container {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  border:0;
+  padding:0;
+  margin:0;
+  width: 100%;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #fff8b6;
+}
+
+.mat-datepicker-toggle {
+  color:white;
+}
+@font-face {
+  font-family: 'webfont';
+  src: url('assets/VL-SOFIAPROSOFT-LIGHT.OTF');
+}
+
+@font-face {
+  font-family: 'webfontbold';
+  src: url('assets/VL-SOFIAPROSOFT-BOLD.OTF');
+}
+
+@font-face {
+  font-family: 'vibanh';
+  src: url('assets/fonts/Quicksand-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'gioithieubanh';
+  src: url('assets/fonts/VL-SANTELIASCRIPT-LIGHT.OTF');
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('assets/VLBROWNSTONESLABLIGHT.OTF'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('assets/VLBROWNSTONESLABLIGHT.OTF'); /* IE9 Compat Modes */
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "MyWebFont", Fallback, sans-serif;
+  font-size: 20px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media only screen and (max-width: 600px) {
+  *{
+    box-sizing: border-box;
+    font-family: "MyWebFont", Fallback, sans-serif;
+    font-size: 16px;
+    color:#ffecb8;
+  }
+
+
+  .slider-info {
+    margin-top: 50px;
+    margin-left: 0px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    text-align: center;
+  }
+
+  .slider-info-2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: fit-content;
+    padding-bottom: 120px
+  }
+
+  .lightimg {
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    background-image: url(assets/slider-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .lightimg.active {
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    background-image: url(assets/slider-button-active.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  #boxshadow {
+    padding-left: 80px;
+  }
+  #boxshadow img {
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: 75px;
+    background-position: center;
+    background-size: contain;
+    -webkit-filter: drop-shadow(2px 2px 5px #1e3f3f);
+    filter: drop-shadow(2px 2px 5px #1e3f3f);
+    }
+
+  #boxshadowTY2 {
+    margin-top: 285px;
+    padding-left: 80px;
+  }
+
+  #boxshadowLY {
+    margin-top: 75px;
+    padding-left: 80px;
+  }
+
+  #boxshadowDY {
+    padding-left: 80px;
+  }
+    
+  #boxshadowHY1 {
+    margin-top: 215px;
+    padding-left: 80px;
+  }
+
+.boxmobile{
+  margin-top:-80px;
+}
+
+  
+  #boxshadowTY2 img {
+    margin-top: -280px;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height:70px;
+    background-position: center;
+    background-size: contain;
+    -webkit-filter: drop-shadow(2px 2px 5px #1e3f3f);
+    filter: drop-shadow(2px 2px 5px #1e3f3f);
+  }
+
+  #boxshadowLY img {
+  justify-content: center;
+  align-content: center;
+  width: 200px;
+  height:70px;
+  background-position: center;
+  background-size: contain;
+  -webkit-filter: drop-shadow(2px 2px 5px #1e3f3f);
+  filter: drop-shadow(2px 2px 5px #1e3f3f);
+  }
+
+  #boxshadowHY1 img {
+  margin-top: -320px;
+  justify-content: center;
+  align-content: center;
+  width: 200px;
+  height:70px;
+  background-position: center;
+  background-size: contain;
+  -webkit-filter: drop-shadow(2px 2px 5px #1e3f3f);
+  filter: drop-shadow(2px 2px 5px #1e3f3f);
+  }
+
+  #boxshadowDY img {
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: 75px;
+    background-position: center;
+    background-size: contain;
+    -webkit-filter: drop-shadow(2px 2px 5px #1e3f3f);
+    filter: drop-shadow(2px 2px 5px #1e3f3f);
+    }
+  
+  .gioithieubanh{
+    margin-top: 20px;
+  }
+
+  .gioithieubanh-text{    
+    text-align: justify;
+    font-family: "gioithieubanh", Fallback, sans-serif;
+    line-height: 20px;
+    color: white;
+  }
+
+  .gioithieubanh-2{
+    margin-top: -220px;
+  }
+  .gioithieubanhHY1{
+    margin-top: -255px;
+  }
+  
+  .hopbanhvagiatien {
+    margin: auto !important;
+  }
+
+  .section-logo {
+  height: 200px;
+  width: 100%;
+  max-width: 400px;
+  background-image: url('assets/hopquatet2022/banner.png');
+  background-position: center bottom; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+}
+
+  .imagepopup{
+    margin-top:200px;
+  }
+  .hover_bkgr_fricc{
+  background:rgba(0,0,0,.4);
+  cursor:pointer;
+  display:none;
+  height:100%;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+  display:inline-block;
+  height:100%;
+  vertical-align:middle;
+}
+  .hover_bkgr_fricc >div  {
+    height: auto;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top: 250px;
+    width: 300px;
+    position: relative;
+  }
+  .trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
+ 
+.formimg{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+  #sec1, #sec2, #sec3{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .navbar {
+    visibility: hidden;
+  }
+  .nangcapbanh img{
+    padding-top:20px;
+  }
+
+  #sec4 {
+    background-image:  url(assets/hopquatet2022/backgroundsec4-7.png),linear-gradient(to right,#112848, #112848, #112848);
+    background-size: 600px auto;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* .section-logo-container {
+    margin-top: 0 !important;
+  } */
+  .slider {
+    border: 1px solid transparent;
+  }
+
+  .slider-2 {
+    border: 1px solid transparent;
+  }
+  .giatien {
+    height: 40px !important;
+  }
+
+  .container-main-MAIN{
+    margin-top:-100px;
+  }
+
+  .container-main-MAIN-2 {
+    margin-top: 100px;
+    flex: 2;
+    justify-content: center;
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    height: fit-content;
+  }
+
+
+
+  .bottom {
+    font-size: 20px !important;
+    display: flex !important;
+    text-align: center !important;
+  }
+  .Aligner-item {
+    font-size: 16px !important;
+    padding:0 !important;
+    font-family: "MyWebFont", Fallback, sans-serif !important;
+    line-height: 35px !important;
+  }
+  .somethinginfo {
+    display: block !important;
+  }
+  .slider-info.bigger {
+    height: fit-content !important;
+  }
+
+  .giatienbanhvamuangay{
+    display: flex;
+    padding-left: 40px;
+  }
+
+  .giatienbanhvamuangayHY1{
+    display: flex;
+    padding-left: 40px;
+    margin-top: 120px;
+  }
+
+  .giatienbanhvamuangayTY2{
+    display: flex;
+    padding-left: 40px;
+  }
+  
+  .muangay img {
+    width: 150px;
+  }
+
+  .muangayHY img {
+    width: 150px;
+  }
+
+  .chitietbanh {
+    display: block !important;
+    align-content: center !important;
+  }
+  .tenvachitietbanh {
+    margin-top: 0px !important;
+  }
+  .chitietbanhLY {
+    display: block !important;
+    align-content: center !important;
+  }
+
+  .chitietbanhLY {
+    display: flex;
+    height: fit-content;
+    margin: 200px 0px 0px 0px;
+    line-height: 20px;
+    color:#ffecb8;
+  }
+
+  .chitietbanhhaiyen2 {
+    display: block !important;
+    align-content: center !important;
+  }
+
+  .chitietbanhhaiyen2 {
+      display: flex;
+      height: fit-content;
+      margin: 250px 0px 0px 0px;
+      line-height: 20px;
+      color:#ffecb8;    
+  }
+
+  .chitietbanhhaiyen {
+    display: block !important;
+    align-content: center !important;
+  }
+
+  .chitietbanhDY {
+    display: block !important;
+    align-content: center !important;
+  }
+
+
+  .hopbanhvagiatien {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .hopbanhvagiatienDY {
+    margin: auto !important;
+  }
+  .hopbanhvagiatienDY {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  .hopbanhvagiatienLY {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .hopbanhvagiatienhaiyen2 {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .hopbanhvagiatienhaiyen img {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hopbanhvagiatienTY2 img {
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .tenvachitietbanhTY2 {
+    margin-top: 0px !important;
+  }
+
+  .tenvachitietbanhLY {
+    margin-top: -65px !important;
+  }
+
+  .cacvicuabanh {
+    margin: auto !important;
+  }
+  .hangmot {
+    display: inline !important;
+    margin: 0 auto !important;
+  }
+  .hinhbanh1 {
+    width: 100% !important;
+  }
+  .chitietvibanh {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+  .hanghai {
+    display: inline !important;
+    margin: 0 auto !important;
+  }
+  .hangba {
+    display: inline !important;
+    margin: 0 auto !important;
+  }
+  #sec3 {
+    padding-bottom: 20px !important;
+  }
+  .title {
+    text-align: center !important;
+    font-size: 18px !important;
+  }
+  .pricing {
+    font-size: 11px !important;
+  }
+  #sec5 {
+    height: fit-content !important;
+  }
+  .luuy {
+    display: block !important;
+    align-content: center !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+  }
+  .hinh {
+    margin: 0 !important;
+  }
+  .text {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .text p {
+    margin: 0 !important;
+  }
+
+  .vibanh {
+    padding: 0 !important;
+    padding-left: 0px;
+  }
+
+  .vibanh2{
+
+  }
+
+  .vibanh table {
+    font-family: "vibanh", Fallback, sans-serif;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    margin: 0 audo;
+  }
+
+  .chitietbanhhaiyen {
+      display: flex;
+      height: fit-content;
+      margin: 0px 0px 0px 0px;
+      line-height: 20px;
+      color:#ffecb8;  
+  }
+
+  .vibanhhaiyen table {
+    font-family: "vibanh", Fallback, sans-serif;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+  }
+
+  .vibanhhaiyen table td{
+    font-family: "vibanh", Fallback, sans-serif;
+    font-size: 10px;
+    width:40%;
+    color:white;
+  }
+
+  .vibanhhaiyen2 table {
+    font-family: "vibanh", Fallback, sans-serif;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+  }
+
+  .vibanhhaiyen2 table   td{
+    font-family: "vibanh", Fallback, sans-serif;
+    font-size: 10px;
+    width:40%;
+    color:white;
+  }
+
+  .giatienbanh img{
+    width: 135px;
+  }
+
+  .giatienbanh-2 img{
+    width: 150px;
+  }
+
+  .giatienbanhHY2 img{
+    width: 150px;
+  }
+ 
+  .chitietbanhmobile {
+    padding-top: 350px;
+  }
+  .chitietbanhmobile td {
+    padding-top:-30px;
+  }
+  .priceDY img{
+    width:200px;
+    height:106px;
+    margin-left:25px;
+  }
+  .hopbanhmobile{
+    margin-top:-310px;
+  }
+  .vibanh td{
+    font-family: "vibanh", Fallback, sans-serif;
+    font-size: 16px;
+    width:40%;
+    color:white;
+  }
+  .slider {
+    border-image: url(assets/framebig.png) 150 fill round !important;
+  }
+
+  .slider-2 {
+    border-image: url(assets/framebig.png) 150 fill round !important;
+  }
+
+  .footer {
+    height: 25vh !important;
+  }
+
+  #bohop{
+    padding-left:20%;
+    padding-top:10px;
+  }
+  .bottom img{
+    height:50%;
+    justify-content: center;
+    width: 100%;
+  height: 50%;
+  }
+  .info-center {
+    flex:10;
+    height: 100%;
+    width: 50%;
+  }
+  .something {
+    color:white;
+    max-width: 1000px;
+    font-family: "gioithieubanh", Fallback, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 50;
+    font-size: 22px;
+    line-height: 20px;
+    padding-bottom: 10px;
+    margin-top:20px;
+
+  }
+
+  .something-2 {
+    flex: 3;
+    color:white;
+    max-width: 1000px;
+    font-family:'gioithieubanh', Fallback, sans-serif;
+    font-weight: 50;
+    font-size: 16px !important;
+    line-height: 20px;
+    margin-top: 20px;
+    padding-right: 40px;
+  }
+
+  .slider-container {
+    width: 100%;
+    min-height: 80px;
+    max-height: fit-content;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+  
+.info-center .bottom {
+  font-family: 'Lemonada', cursive;
+  display: flex;
+  font-size: 30px;
+  
+  color:#fed01a;
+}
+
+#sec1 {
+  width: fit-content;
+  padding-bottom: 100px;
+  background-image: url(assets/hopquatet2022/backgroundsec1-4.png),linear-gradient(to right,#112848, #112848, #112848);
+  background-repeat: no-repeat;
+  background-size: 100% 85%;
+}
+#sec6{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image:  url(assets/hopquatet2022/backgroundsec6.png),linear-gradient(to right,#8f181b, #8f181b, #8f181b);
+  background-size: 250px 392px;
+  background-repeat: repeat, repeat;
+  height: fit-content;
+  padding-bottom: 0px;
+}
+.section-logo-container {
+  margin-top: 0px;
+  width:100%;
+  display: flex;
+  background-size: 250px 392px;
+  justify-content: center;
+  height: 10vh;
+  /* background-image:  url(assets/backgroundslide.png),linear-gradient(to right,#112848, #112848, #112848); */
+}
+.chitiet {
+  font-family: "MyWebFont", Fallback, sans-serif;
+  color:#ffecb8;
+  line-height: 20px;
+  padding: 0 !important;
+  font-size: 16px !important;
+  margin-top: 10px !important;
+}
+
+
+.slider {
+  margin: 220px 50px 0 50px;
+  width: 100%;
+  height: fit-content;
+  max-width: 1000px;
+  border-style: solid;
+  border-width: 15px;
+  border-image: url(assets/framebig.png) 80 fill round;
+}
+
+
+
+.slider-2 {
+  margin: -90px -40px 100px 0px;
+  width: 100%;
+  height: fit-content;
+  max-width: 400px;
+  border-style: solid;
+  border-width: 10px;
+  border-image: url(assets/framebig.png) 80 fill round;
+
+}
+
+.hopbanh img{
+  width: 80%;
+  height: 100%;
+}
+
+.hopbanh {
+  margin-right:20px;
+  margin-left: 20px;
+  margin-top: -170px;
+  padding-bottom: 100px;
+}
+
+
+.hopbanhlocyen {
+  margin-right:20px;
+  margin-left: 20px;
+  margin-top: -170px;
+}
+
+.hopbanhlocyen img{
+  width: 80%;
+  height: 100%;
+}
+
+.hopbanhDY img{
+  width: 35%;
+  height: 100%;
+  margin: 0px 0px -375px 350px;
+}
+
+.hopbanhTY1{
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 85px;
+  padding-bottom: 110px;
+}
+
+.hopbanhTY1 img{
+  width: 80%;
+  height: 100%;
+}
+
+
+
+.hopbanhTY2 img{
+  width: 80%;
+  height: 100%;
+}
+
+.hopbanhHY{
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: -310px;
+  padding-bottom: 110px;
+}
+
+.hopbanhHY img{
+  width: 80%;
+  height: 100%;
+}
+
+.hopbanhvagiatienTY1 {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.hopbanhvagiatienTY2 {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.hopbanhvagiatienhaiyen {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.chitietbanh {
+  display: flex;
+  height: fit-content;
+  margin: 0px 0px 0px 0px;
+  line-height: 20px;
+  color:#ffecb8;
+}
+
+.chitietbanhDY {
+  display: flex;
+  height: fit-content;
+  margin: 200px 0px 0px 0px;
+  line-height: 20px;
+  color:#ffecb8;
+}
+
+.vibanhhaiyen {
+  display: flex;
+  height: fit-content;
+  margin: -160px 0px -50px 0px;
+  line-height: 20px;
+  color:white;
+  font-family: "vibanh", Fallback, sans-serif;
+}
+.vibanhhaiyen2 {
+  display: flex;
+  height: fit-content;
+  margin: 30px 0px -50px 0px;
+  line-height: 20px;
+  color:white;
+  font-family: "vibanh", Fallback, sans-serif;
+}
+
+.topmargin{
+  margin-top: -100px;
+}
+
+.topmargin2{
+  margin-top: 30px;
+}
+
+.topmargin3{
+  margin-top: 130px;
+}
+
+.bohop img{
+  padding-top:20px;
+  padding-bottom: 5px;
+  margin-left:110px;
+  width:40%;
+  height: 100%;
+}
+.submit {
+  margin-right: 125px;
+  width:150px;
+  height: 80px;
+  background-image: url(assets/datbanhbutton.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#sec2 {
+  display: flex;
+  width: fit-content;
+  margin-top: -280px;
+  padding-bottom: 20px;
+  justify-content: center;
+  background-image: url(../src/assets/hopquatet2022/backgroundsec2-2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  
+}
+
+.bangchinhsachuudai{
+  height:1545.1px;   
+}
+
+
+
+.mat-input-element {
+  font-family: "MyWebFont", Fallback, sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  color: #f9f0cd;
+  line-height: 20px;
+}
+.forminput {
+  flex:6;
+  margin-top:-5px;
+  background-image: url(assets/backgroundslide1.png),linear-gradient(to right,#8f181b, #8f181b, #8f181b);
+  background-size: 250px 392px;
+  color:#fff3bd;
+}
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  padding-right:10px;
+}
+.imgfooter {
+  width: 100%;
+  background-color: #fff8b6;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url(../src/assets/backgroundslide1.png);
+  background-repeat: repeat;
+  background-size: 100px 100px;
+}
+#sec5 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image:  url(../src/assets/backgroundslide1.png),linear-gradient(to right,#fff8b6, #fff8b6, #fff8b6);
+  background-size: 250px 392px;
+  background-repeat: repeat, repeat;
+  height: fit-content;
+  padding-bottom: 0px;
+
+}
+#sec3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image:  url(../src/assets/backgroundslide1.png),linear-gradient(to right,#fff8b6, #fff8b6, #fff8b6);
+  background-size: 250px 392px;
+  background-repeat: repeat, repeat;
+
+}
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
